@@ -1,30 +1,39 @@
 {
-    "name": "kanellov/slim-twig-flash",
-    "type": "library",
-    "description": "A Twig extension to access Slim Flash messages in templates",
-    "license": "GPL-3.0-or-later",
-    "keywords": ["slim","framework","provider","flash","message", "twig", "extension", "view"],
-    "authors": [
-        {
-            "name": "Vassilis Kanellopoulos",
-            "email": "contact@kanellov.com",
-            "homepage": "http://kanellov.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.5.0",
-        "twig/twig": "^1.0",
-        "slim/flash": "^0.1"
-    },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "1.*",
-        "phpunit/PHPUnit": "4.8.0",
-        "satooshi/php-coveralls": "dev-master",
-        "phpunit/phpcov": "2.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Knlv\\Slim\\Views\\": "src"
-        }
-    }
+	"name": "kanellov/slim-twig-flash",
+	"type": "library",
+	"description": "A Twig extension to access Slim Flash messages in templates",
+	"license": "GPL-3.0-or-later",
+	"keywords": [
+		"slim",
+		"framework",
+		"provider",
+		"flash",
+		"message",
+		"twig",
+		"extension",
+		"view"
+	],
+	"authors": [
+		{
+			"name": "Vassilis Kanellopoulos",
+			"email": "contact@kanellov.com",
+			"homepage": "http://kanellov.com"
+		}
+	],
+	"require": {
+		"php": ">=7.2",
+		"twig/twig": "^1.34.0 || ^2.4.0 || ^3.0.0",
+		"slim/flash": "0.4.0"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "1.*",
+		"phpunit/phpunit": "^5",
+		"satooshi/php-coveralls": "^1.0",
+		"phpunit/phpcov": "^3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Knlv\\Slim\\Views\\": "src"
+		}
+	}
 }

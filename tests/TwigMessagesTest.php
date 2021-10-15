@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Test for Slim Twig Flash.
  *
@@ -7,11 +8,12 @@
  * @copyright Copyright (c) 2016 Vassilis Kanellopoulos <contact@kanellov.com>
  * @license GNU GPLv3 http://www.gnu.org/licenses/gpl-3.0-standalone.html
  */
+
 namespace Knlv\Slim\Test\Views;
 
 use Knlv\Slim\Views\TwigMessages;
-use Twig_Environment;
-use Twig_Loader_Filesystem;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 class TwigMessagesTest extends \PHPUnit_Framework_TestCase
 {
@@ -34,8 +36,8 @@ class TwigMessagesTest extends \PHPUnit_Framework_TestCase
         $this->flash = $this->getMockBuilder('Slim\Flash\Messages')
             ->disableOriginalConstructor()
             ->setMethods(array(
-              'getMessages',
-              'getMessage'
+                'getMessages',
+                'getMessage'
             ))
             ->getMock();
         $this->flash->expects($this->any())
@@ -48,8 +50,8 @@ class TwigMessagesTest extends \PHPUnit_Framework_TestCase
             }));
 
         $this->extension = new TwigMessages($this->flash);
-        $this->view = new Twig_Environment(
-            new Twig_Loader_Filesystem(__DIR__.'/templates')
+        $this->view = new Environment(
+            new FilesystemLoader(__DIR__ . '/templates')
         );
         $this->view->addExtension($this->extension);
     }
@@ -57,7 +59,7 @@ class TwigMessagesTest extends \PHPUnit_Framework_TestCase
     public function testMessagesInTemplateUsingKey()
     {
         $result = $this->view->render('with-key.twig');
-        $expected = implode("\n", $this->dummyMessages['key1'])."\n";
+        $expected = implode("\n", $this->dummyMessages['key1']) . "\n";
         $this->assertEquals($expected, $result);
     }
 

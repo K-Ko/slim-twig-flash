@@ -1,19 +1,21 @@
 <?php
+
 /**
  * Slim Twig Flash.
- * 
+ *
  * @link https://github.com/kanellov/slim-twig-flash for the canonical source repository
  *
  * @copyright Copyright (c) 2016 Vassilis Kanellopoulos <contact@kanellov.com>
  * @license GNU GPLv3 http://www.gnu.org/licenses/gpl-3.0-standalone.html
  */
+
 namespace Knlv\Slim\Views;
 
 use Slim\Flash\Messages;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class TwigMessages extends Twig_Extension
+class TwigMessages extends AbstractExtension
 {
     /**
      * @var Messages
@@ -48,7 +50,7 @@ class TwigMessages extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('flash', [$this, 'getMessages']),
+            new TwigFunction('flash', [$this, 'getMessages']),
         ];
     }
 
