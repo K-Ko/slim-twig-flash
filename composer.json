@@ -1,7 +1,7 @@
 {
 	"name": "k-ko/slim-twig-flash",
 	"type": "library",
-	"description": "A Twig extension to access Slim Flash messages in templates",
+	"description": "A Twig 3 extension to access Slim Flash messages in templates",
 	"license": "GPL-3.0-or-later",
 	"keywords": [
 		"slim",
@@ -9,7 +9,7 @@
 		"provider",
 		"flash",
 		"message",
-		"twig",
+		"twig3",
 		"extension",
 		"view"
 	],
@@ -18,6 +18,10 @@
 			"name": "Vassilis Kanellopoulos",
 			"email": "contact@kanellov.com",
 			"homepage": "http://kanellov.com"
+		},
+		{
+			"name": "Knut Kohl",
+			"email": "github@knutkohl.de"
 		}
 	],
 	"require": {
