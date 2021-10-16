@@ -2,10 +2,6 @@
 
 A Twig 3 extension to access Slim Flash messages in templates.
 
-| **master**                                                                                                                          | **develop**                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [![Build Status](https://travis-ci.org/kanellov/slim-twig-flash.svg?branch=master)](https://travis-ci.org/kanellov/slim-twig-flash) | [![Build Status](https://travis-ci.org/kanellov/slim-twig-flash.svg?branch=develop)](https://travis-ci.org/kanellov/slim-twig-flash) |
-
 ## Install
 
 Via [Composer](https://getcomposer.org/)

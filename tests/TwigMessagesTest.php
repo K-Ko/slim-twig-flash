@@ -3,16 +3,17 @@
 /**
  * Test for Slim Twig Flash.
  *
- * @link https://github.com/kanellov/slim-twig-flash for the canonical source repository
+ * @link https://github.com/k-ko/slim-twig-flash for the canonical source repository
  *
  * @copyright Copyright (c) 2016 Vassilis Kanellopoulos <contact@kanellov.com>
+ * @copyright Copyright (c) 2021 Knut Kohl <github@knutkohl.de>
  * @license GNU GPLv3 http://www.gnu.org/licenses/gpl-3.0-standalone.html
  */
 
-namespace Knlv\Slim\Test\Views;
+namespace Tests;
 
-use Knlv\Slim\Views\TwigMessages;
 use Twig\Environment;
+use Twig\Extension\SlimFlashMessages;
 use Twig\Loader\FilesystemLoader;
 
 class TwigMessagesTest extends \PHPUnit_Framework_TestCase
@@ -49,10 +50,8 @@ class TwigMessagesTest extends \PHPUnit_Framework_TestCase
                 return isset($this->dummyMessages[$key]) ? $this->dummyMessages[$key] : null;
             }));
 
-        $this->extension = new TwigMessages($this->flash);
-        $this->view = new Environment(
-            new FilesystemLoader(__DIR__ . '/templates')
-        );
+        $this->extension = new SlimFlashMessages($this->flash);
+        $this->view = new Environment(new FilesystemLoader(__DIR__ . '/templates'));
         $this->view->addExtension($this->extension);
     }
 

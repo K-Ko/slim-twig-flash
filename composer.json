@@ -37,7 +37,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Knlv\\Slim\\Views\\": "src"
+			"Twig\\Extension\\": "src"
 		}
 	}
 }
