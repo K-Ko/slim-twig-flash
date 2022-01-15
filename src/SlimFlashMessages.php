@@ -54,7 +54,7 @@ class SlimFlashMessages extends AbstractExtension
      * Returns Flash messages; If key is provided then returns messages
      * for that key.
      */
-    public function getMessages(string $key = null): array
+    public function getMessages(string $key = null): ?array
     {
         if (null !== $key) {
             return $this->messages->getMessage($key);
